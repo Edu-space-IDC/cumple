@@ -521,6 +521,16 @@ section {
   border: 1px solid #ffffff30;
   background: #ffffff12;
 }
+.button,
+.remove,
+.check input {
+  min-height: 44px;
+}
+.field input[type="text"],
+.guest input {
+  min-width: 0;
+  font-size: 16px; /* evita zoom automático al enfocar en Chrome Android */
+}
 footer {
   padding: 25px 0;
   border-top: 1px solid #ffffff12;
@@ -641,6 +651,7 @@ footer {
 
 @media (max-width: 740px) {
   .hero {
+    min-height: 90vh;
     min-height: 90svh;
   }
   .invite-grid {
@@ -667,6 +678,99 @@ footer {
   }
   section {
     padding: 60px 0;
+  }
+}
+@media (max-width: 480px) {
+  .wrap {
+    width: calc(100% - 32px);
+  }
+  .hero {
+    min-height: 100vh;
+    min-height: 100svh;
+    padding: 76px 0 72px;
+  }
+  .hero h1 {
+    font-size: clamp(3.6rem, 16vw, 5.2rem);
+  }
+  .hero .date-pill {
+    gap: 8px;
+    padding: 11px 14px;
+    font-size: .9rem;
+  }
+  .eyebrow {
+    font-size: .66rem;
+    letter-spacing: .2em;
+  }
+  .spark.s1 { left: 5%; }
+  .spark.s2 { right: 6%; }
+  .spark.s3 { left: 9%; }
+  .section-title {
+    font-size: clamp(2rem, 10vw, 2.8rem);
+  }
+  .photo {
+    min-height: min(350px, 95vw);
+    border-radius: 46vw 46vw 24px 24px;
+  }
+  .photo::after {
+    border-radius: calc(46vw - 10px) calc(46vw - 10px) 17px 17px;
+  }
+  .map-frame {
+    min-height: 280px;
+  }
+  .location-info {
+    padding: 25px 22px 28px;
+  }
+  .location-info .button {
+    width: 100%;
+  }
+  .form-card {
+    padding: 24px 18px;
+  }
+  .guest {
+    align-items: stretch;
+  }
+  .remove {
+    padding: 0 10px;
+  }
+  .form-actions > .button {
+    width: 100%;
+  }
+  .form-actions .status {
+    width: 100%;
+  }
+}
+@media (max-width: 360px) {
+  .wrap {
+    width: calc(100% - 28px);
+  }
+  .hero h1 {
+    font-size: 3.45rem;
+  }
+  .hero .date-pill {
+    gap: 6px;
+    padding: 10px 11px;
+    font-size: .82rem;
+  }
+  .guest {
+    flex-direction: column;
+  }
+  .remove {
+    align-self: flex-end;
+    min-height: 40px;
+  }
+}
+@media (hover: none) {
+  .photo:hover,
+  .detail:hover,
+  .button:hover {
+    transform: none;
+    box-shadow: none;
+  }
+  .photo:hover img {
+    transform: none;
+  }
+  .button:hover::after {
+    left: -45%;
   }
 }
 @media (prefers-reduced-motion: reduce) {
