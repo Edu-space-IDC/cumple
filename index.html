@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#08172f">
+  <title>Mis 18 · ¡Estás invitado!</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="grain"></div><div class="glow one"></div><div class="glow two"></div>
+  <header class="hero wrap">
+    <span class="spark s1">✦</span><span class="spark s2">✧</span><span class="spark s3">✦</span>
+    <div class="reveal visible"><div class="eyebrow">Una noche para recordar</div><h1>¡Mis<span>18 años!</span></h1><p>Un nuevo capítulo merece una gran celebración.</p><div class="date-pill"><span>♥</span><b>18 de octubre</b><span>·</span>5:00 p. m.</div></div>
+    <div class="scroll">DESLIZA PARA DESCUBRIR ↓</div>
+  </header>
+  <main>
+    <section class="intro wrap"><div class="invite-grid">
+      <div class="photo reveal" id="photoFrame"><div class="placeholder"><span class="icon">📸</span><strong>Tu foto va aquí</strong><small>En script.js, reemplaza<br><code>PEGA_AQUI_LA_URL_DE_TU_FOTO</code></small></div></div>
+      <div class="intro-copy reveal"><div class="section-label">¡Estás invitado!</div><h2 class="section-title">Un cumpleaños<br>muy especial</h2><p>Hay fechas que se celebran a lo grande. Me encantaría compartir este momento contigo, rodeado de las personas que más quiero.</p><p class="invite">Te invito a mi<br>cumpleaños <em>#18</em> ✨</p><p>¡Prepárate para una tarde llena de música, risas y buenos recuerdos!</p></div>
+    </div></section>
+    <section class="details"><div class="wrap"><div class="section-label reveal">Guarda la fecha</div><h2 class="section-title reveal">Los detalles</h2>
+      <div class="detail-grid"><article class="detail reveal"><span class="ico">📅</span><h3>¿Cuándo?</h3><p>18 de octubre</p><small>La celebración será este día 🎉</small></article><article class="detail reveal"><span class="ico">⏰</span><h3>¿A qué hora?</h3><p>5:00 p. m.</p><small>¡Llega con ganas de celebrar!</small></article><article class="detail reveal"><span class="ico">📍</span><h3>¿Dónde?</h3><p id="placeName">Ubicación por confirmar</p><small id="placeAddress">Pronto compartiré la dirección</small></article></div>
+      <div class="map-card location-layout reveal">
+        <div class="map-frame" id="mapFrame"><div class="map-placeholder"><div class="ico">🗺️</div><strong>El mapa aparecerá aquí</strong></div></div>
+        <div class="location-info">
+          <span class="location-pin" aria-hidden="true">📍</span>
+          <div class="section-label">Punto de encuentro</div>
+          <h3>Dirección</h3>
+          <p id="mapCaption">Iglesia Cruzada Cristiana El Shaddai, Colombia</p>
+          <a class="button map-button" id="mapsButton" href="https://maps.app.goo.gl/ZbEUD2f4iXf7aCHy5" target="_blank" rel="noopener noreferrer">↗ <span>Abrir en Google Maps</span></a>
+          <small>Haz clic para obtener indicaciones desde tu ubicación.</small>
+        </div>
+      </div>
+    </div></section>
+    <section class="rsvp wrap" id="confirmar"><div class="section-label reveal">Queremos contar contigo</div><h2 class="section-title reveal">Confirma tu asistencia</h2><div class="form-card reveal"><p>Cuéntame si vienes y quiénes te acompañan. Así tendremos todo listo para recibirlos 💙</p>
+      <form id="rsvpForm"><div class="field"><label for="fullName">Tu nombre completo</label><input id="fullName" name="nombre" type="text" autocomplete="name" placeholder="Ej. Valentina Pérez" required maxlength="120"></div>
+        <fieldset class="field" style="border:0;padding:0;margin-left:0"><legend>¿Confirmas tu asistencia?</legend><label class="check"><input type="checkbox" name="confirmado" id="attending"> Sí, ¡allá estaré!</label></fieldset>
+        <div class="field"><label>¿Vienes con alguien? (opcional)</label><div id="guestList" class="guests"></div><button class="button secondary add" type="button" id="addGuest">＋ Añadir acompañante</button></div>
+        <div class="form-actions"><button class="button" type="submit">Enviar confirmación ♥</button><span class="status" id="formStatus" aria-live="polite"></span></div><div class="fine">Tus datos se usarán para organizar la celebración.</div>
+      </form></div></section>
+  </main><footer>Hecho con cariño para celebrar mis 18 💙</footer>
+  <script src="script.js" defer></script>
+</body>
+</html>
